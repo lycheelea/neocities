@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAWBOX</title>
+    <style>
+       body {
+            background: url("https://loona.neocities.org/dreamscape.png");
+        }
+        @font-face {
+  font-family: "adelia";
+  src: url("https://files.catbox.moe/quibua.otf");
+}
+
+@font-face {
+  font-family: "good bakwan";
+  src: url("https://files.catbox.moe/4xjeqs.otf");
+}
+
+        h1 {
+             font-size: 30px;
+  color: #f963b8;
+  filter: drop-shadow(3px 0 1px white) drop-shadow(0 3px 1px white)
+    drop-shadow(-3px 0 1px white) drop-shadow(0 -3px 1px white)
+    drop-shadow(-0px 1px 1px #81877b);
+            font-family: 'adelia';
+        }
+        
+        h2 {
+            margin-top: 50px;
+            font-size: 30px;
+            font-family: good bakwan;
+            color: #6A67FE;
+            
+        }
+        
+        * {
+            box-sizing: border-box;
+            font-family: "Calibri", "Trebuchet MS", sans-serif;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            font-style: italic;
+            color: #db789e;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        }
+        canvas {
+            border: 1px solid #736DFE;
+            cursor: crosshair;
+            background:url(https://files.catbox.moe/2rl6bs.png);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            color: #89684c;
+        }
+        .image-container {
+            border: 1px solid #ccc;
+            padding: 5px;
+            max-width: 200px;
+            text-align: center;
+            background-color: white;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        button {
+            background-color: #736DFE;
+            color: white;
+        }
+        button:hover {
+            background-color: white;
+            color: #736DFE;
+        }
+        @media only screen and (max-width: 550px) {
+        canvas {
+            width: calc(100% - 10px);
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+<center>
+    <h1>DRAWBOX</h1>
+    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+    <br>
+    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+    
+    <button onclick="Restore()">Undo</button>
+    <button onclick="Clear()">Clear</button>
+    
+    <input type="color" oninput="stroke_color = this.value">
+    <input type="range" min="1" max="100" oninput="stroke_width = this.value">
+    
+    <button id="submit">Submit drawing</button>
+    <p id="status"></p>
+
+	
+    <h2>Submitted Drawings ♡</h2>
+    <div id="gallery">Loading images...</div>
+    
+    </center>
+    <script src="drawbox.js"></script>
+
+</body>
+</html>

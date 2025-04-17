@@ -1,0 +1,510 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/pop/shared-af8c1d1b.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>about me!</title>
+</head>
+<style>
+@font-face {
+  font-family: "nataly";
+  src: url("https://files.catbox.moe/ebdvol.otf");
+}
+
+@font-face {
+  font-family: "NDS BIOS";
+  src: url("https://files.catbox.moe/ipi8ww.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "adelia";
+  src: url("https://files.catbox.moe/quibua.otf");
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  background: url(https://files.catbox.moe/sgpaa3.jpeg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Mostly for vertical scrollbars */
+  height: 8px; /* Mostly for horizontal scrollbars */
+}
+::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #879773;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+  /* Background */
+  background: transparent;
+}
+
+h1 {
+  color: #879773;
+  font-weight: 400;
+  font-family: adelia;
+  letter-spacing: 5px;
+  filter: drop-shadow(3px 0 1px white) drop-shadow(0 3px 1px white)
+    drop-shadow(-3px 0 1px white) drop-shadow(0 -3px 1px white)
+    drop-shadow(-0px 1px 1px #81877b);
+}
+
+h2 {
+  font-weight: 400;
+  font-family: nataly;
+  letter-spacing: 1px;
+  filter: drop-shadow(3px 0 1px white) drop-shadow(0 3px 1px white)
+    drop-shadow(-3px 0 1px white) drop-shadow(0 -3px 1px white)
+    drop-shadow(-0px 1px 1px #81877b);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+strong {
+  font-weight: 800;
+  color: #705d3f;
+}
+.container {
+  padding: 10px;
+  height: 40em;
+  width: 50em;
+  border: 3px #879773 dashed;
+  border-radius: 5px;
+  background-color: snow;
+}
+
+#grid {
+  display: grid;
+  width: auto;
+  height: 100%;
+}
+
+.navbox {
+  border: 1px solid #879773;
+  width: 14rem;
+  height: 40rem;
+  overflow: auto;
+  border-radius: 9px;
+  color: #879773;
+  background-image: url(https://files.catbox.moe/bf6lm3.png);
+}
+
+.innernav {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  border: 1px #705d3f solid;
+  border-radius: 6px;
+  padding: 8px;
+  padding-left: 5px;
+  width: 90%;
+  margin-bottom: 5px;
+  color: #705d3f;
+  background: #ffffff80;
+  transition: 0.8s ease-in-out;
+}
+
+button:hover {
+  letter-spacing: 5px;
+  box-shadow: -1px -1px 6px 0px inset white, 1px 1px 6px 0px inset white,
+    0px 0px 5px white;
+}
+
+.sidebox1,
+.sidebox2 {
+  font-family: iceland;
+  margin-left: 11px;
+  margin-bottom: 8px;
+  width: 80%;
+  padding: 10px;
+  color: #705d3f;
+  background-color: #ffffff80;
+  border-radius: 6px;
+  text-align: left;
+  border: 1px solid #705d3f;
+}
+
+.lastFMContainer {
+  margin-bottom: -8px;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  content-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.track-info {
+  font-size: 14px;
+  width: 170px;
+  color: #705d3f;
+  text-align: center;
+}
+.track-info--image {
+  width: 90px;
+  float: left;
+}
+
+.track-info--intro {
+  padding: 5px;
+  margin-top: -95px;
+  margin-left: 100px;
+}
+
+.track-info--title,
+.track-info--artist {
+  margin-left: 100px;
+  padding: 2px;
+}
+
+.about {
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  border-width: 7px;
+  border-style: solid;
+  border-image: url("https://i.imgur.com/8xftJ3v.gif") 7 fill round;
+  color: #705d3f;
+  padding: 5px;
+  text-align: center;
+  overflow: auto;
+  font-family: nds bios, arial;
+  font-size: 22px;
+}
+
+lea {
+  top: -160px;
+  left: -50px;
+  font-size: 50px;
+  display: block;
+  line-height: 0%;
+  position: relative;
+  z-index: 200;
+  color: #879773;
+  font-weight: 400;
+  font-family: adelia;
+  letter-spacing: 5px;
+  filter: drop-shadow(3px 0 1px white) drop-shadow(0 3px 1px white)
+    drop-shadow(-3px 0 1px white) drop-shadow(0 -3px 1px white)
+    drop-shadow(-0px 1px 1px #81877b);
+}
+
+#icon {
+  position: relative;
+  z-index: 200;
+  top: 25px;
+  right: -25px;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #828e79;
+  background: snow;
+  transform: rotate(-5deg);
+  filter: drop-shadow(-0px 1px 2px #99ab91);
+}
+
+#faves {
+  position: relative;
+  background-color: snow;
+  top: -5px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: left;
+  padding: 5px;
+  color: #705d3f;
+  font-size: 15px;
+  border-width: 7px;
+  border-style: solid;
+  border-image: url("https://i.imgur.com/8xftJ3v.gif") 7 fill round;
+  font-family: nds bios;
+}
+
+#me {
+  position: relative;
+  background: url(https://files.catbox.moe/we9sv3.gif);
+  height: 170px;
+  width: 270px;
+  left: 35px;
+  top: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  transform: rotate(2deg);
+  overflow: hidden;
+  filter: drop-shadow(-0px 1px 2px #99ab91);
+}
+
+#me img {
+  height: 170px;
+}
+
+.box2 {
+  margin-left: 10px;
+  background:url(https://files.catbox.moe/ydzv27.jpg);
+  border: 1px solid black;
+  border-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 120px;
+  width: 540px;
+}
+
+.box2 img {
+  transition: 0.3s;
+  height: 100px;
+  
+}
+
+.box2 img:hover {
+border-radius: 15px;
+}
+
+.capy:hover {
+  transform: scale(1.1);
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Iceland&family=Orbitron:wght@400..900&family=Rationale&family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+
+<body>
+  <div class="container">
+
+    <div id="grid" style="grid-template-columns: 30% 70%;
+    width: 100%;">
+      <div class="navbox">
+        <div class="innernav">
+          <h2> about me !</h2>
+          <div class="sidebox1">
+            <div id="statuscafe">
+              <div id="statuscafe-username"></div>
+              <div id="statuscafe-content"></div>
+            </div>
+            <script src="https://status.cafe/current-status.js?name=lycheelea" defer></script>
+          </div>
+          <div class="sidebox2">
+            <div class="lastFMContainer">
+              <div class="track-info artwork">
+                <img class="track-info--image">
+              </div>
+              <div class="track-info">
+                <div class="track-info--intro"></div>
+                <div class="track-info--title"></div>
+                <div class="track-info--artist"></div>
+              </div>
+            </div>
+            <script>
+              var ListenWithMe = (function() {
+                // Add your own config here
+                var LASTFM_API_KEY = "43cfce69920cd1ce0b2f260a60357e12";
+                var LASTFM_USERNAME = "lycheelea";
+                var USER_NAME = "lea"
+                // Elements
+                var $playerWrapper = document.getElementById('spotify-player-wrapper');
+                var $trackIntro = document.getElementsByClassName('track-info--intro')[0]
+                var $trackTitle = document.getElementsByClassName('track-info--title')[0]
+                var $trackArtist = document.getElementsByClassName('track-info--artist')[0]
+                var $trackImage = document.getElementsByClassName("track-info--image")[0]
+                var currentSong = {};
+                var REFRESH_INTERVAL = 10000;
+                var refreshTimer = null;
+                return {
+                  init: init
+                }
+
+                function init() {
+                  getCurrentTrack().then(function(data) {
+                    console.log(data)
+                    try {
+                      currentSong.nowPlaying = data['@attr'].nowplaying;
+                    } catch (err) {
+                      console.log(err);
+                    }
+                    currentSong.artist = data.artist['#text'];
+                    currentSong.track = data.name;
+                    currentSong.image = data.image[3]["#text"];
+                    updateTitle();
+                    updateInfo();
+                    return getTrackURI();
+                  }).then(function(data) {
+                    console.log(data)
+                    $playerWrapper.innerHTML = buildSpotifyPlayer(data.uri);
+                  })
+                  if (!refreshTimer) {
+                    refreshTimer = setInterval(refresh, REFRESH_INTERVAL)
+                  }
+                }
+
+                function refresh() {
+                  console.log("ping");
+                  getCurrentTrack().then(function(data) {
+                    if (currentSong.track !== data.name && currentSong.track !== data.artist['#text']) {
+                      // kinda lazy
+                      init();
+                    }
+                  })
+                }
+                // Make a call to Last FM to get your latest played tracks;
+                function getCurrentTrack() {
+                  var url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + LASTFM_USERNAME + "&api_key=" + LASTFM_API_KEY + "&format=json";
+                  return new Promise(function(resolve, reject) {
+                    var req = new XMLHttpRequest();
+                    req.open('GET', url);
+                    req.onload = function() {
+                      if (req.status == 200) {
+                        var data = JSON.parse(req.response);
+                        try {
+                          resolve(data.recenttracks.track[0]);
+                        } catch (err) {
+                          reject(err);
+                        }
+                      } else {
+                        reject(Error(req.statusText));
+                      }
+                    };
+                    req.onerror = function() {
+                      reject(Error("Network Error"));
+                    };
+                    req.send();
+                  })
+                }
+                // Make a call to Spotify to search for the track and return the info
+                function getTrackURI() {
+                  var url = "//api.spotify.com/v1/search?q=track:" + encodeURIComponent(currentSong.track) + "%20artist:" + encodeURIComponent(currentSong.artist) + "&type=track"
+                  return new Promise(function(resolve, reject) {
+                    var req = new XMLHttpRequest();
+                    req.open('GET', url);
+                    req.onload = function() {
+                      if (req.status == 200) {
+                        var data = JSON.parse(req.responseText);
+                        try {
+                          resolve(data.tracks.items[0]);
+                        } catch (err) {
+                          reject(err);
+                        }
+                      } else {
+                        reject(Error(req.statusText));
+                      }
+                    };
+                    req.onerror = function() {
+                      reject(Error("Network Error"));
+                    };
+                    req.send();
+                  })
+                }
+                // Returns an iframe with the track's URI
+                function buildSpotifyPlayer(trackUri) {
+                  if (!trackUri) return;
+                  return '<iframe src="https://embed.spotify.com/?uri=' + trackUri + '" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>';
+                }
+
+                function updateTitle() {
+                  document.title = currentSong.track + " -- " + currentSong.artist;
+                }
+
+                function updateInfo() {
+                  var introMsg = USER_NAME + " last <br>listened to...</br>";
+                  if (currentSong.nowPlaying) {
+                    introMsg = USER_NAME + " is <br> listening to...</br>";
+                  }
+                  $trackIntro.innerHTML = introMsg;
+                  $trackTitle.innerHTML = currentSong.track;
+                  $trackArtist.innerHTML = currentSong.artist;
+                  $trackImage.src = currentSong.image;
+                }
+              })();
+              ListenWithMe.init();
+            </script>
+
+          </div>
+          <a href="/"><button> go back </button> </a>
+          <a href=""><button> diary </button></a>
+          <a href=""> <button> shrines </button></a>
+          <a href="">  <button> credits </button></a>
+          <img src="https://64.media.tumblr.com/2a7b845db6fd8d92a894e30c4720bd8b/805498b4d3bc386c-55/s1280x1920/56d6b1d4061fc4c0d41a4cfd801c03b2b100c7f5.pnj" style="width: 200px;" class="capy">
+        </div>
+
+      </div>
+      <div id="grid" style="grid-template-columns: 40% 60%;height:100%;width:100%; background: url(https://files.catbox.moe/bf6lm3.png); border: 1px solid #879773;overflow: auto;border-radius: 9px;">
+        <div class="info">
+          <img src="https://files.catbox.moe/mk6wvo.jpg" width="150" id="icon">
+          <div style="padding-left:50px;text-align:center;display:block;">
+            <lea>lea</lea>
+          </div>
+        </div>
+        <div class="about">
+          my name is lea. <img src="https://file.garden/Zj8MKPoh-G9Y8EJE/pixels/green/IMG_4314.gif"> i am a 27 year old mexican-american and my days are spent huddled in my room listening to music<img src="https://file.garden/ZfLodVA4xzfd-zj7/4%20green/131a7dfb.gif">, coding, studying, reading fic, or playing video games.
+          <p>
+            i live in the middle of nowhere of arizona where it is too hot for humans to survive. i have a degree in political science and i'm currently working on another degree in sociology with a minor in anthropology. <img src="https://file.garden/Zj8MKPoh-G9Y8EJE/pixels/green/IMG_4307.gif">
+          <p>
+            for those who care: i'm an infp, 2w1, and a cancer sun, capricorn moon, and capricorn rising. <img src="https://i.postimg.cc/jjS2KjMt/83377-CAD-F86-A-4-EBB-8-F1-B-C417-D388928-A.gif"> you can view my full chart <a href="">here</a>!  
+          </p>
+          <img src="https://dividers.crd.co/assets/images/gallery08/7fdd9066.png?v=05d33f91">
+
+        </div>
+        <div id="faves">
+          <span style="font-size:20px;z-index:200;background:#becfb2;font-style:italic;text-align:center;color:#705d3f;"> <img src="https://file.garden/Zj8MKPoh-G9Y8EJE/pixels/brown/IMG_4381.gif">lea's favorites</span>
+          <div style="height:160px;overflow-y:scroll;padding:5px;">
+            <hr> <em>film: the handmaiden (2016)</em>
+            <hr> <em>music: ethel cain, bring me the horizon, doechii. halsey, charli xcx</em>
+            <hr> <em>kpop: le sserafim, aespa, stray kids, twice, ive</em>
+            <hr> <em>games: kingdom hearts II (2005), genshin impact, honkai star rail, infinity nikki</em>
+            <hr> <em>characters: viktor (arcane), jayce talis (arcane), hiro hamada (big hero 6)</em>
+            <hr> <em>animal: red pandas, brown/black bears, highland cows</em>
+            <hr> <em>food: vegan sushi, spaghetti, most mexican food</em>
+            <hr> <em>drink: iced london fogs, strawberry matcha lattes, thai tea, brown sugar milk tea</em>
+            <hr>
+          </div>
+        </div>
+        <div id="me">
+          <marquee direction="left" scrollamount="6" behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();">
+            <img src="https://i.pinimg.com/736x/d3/df/a2/d3dfa2b26801ba7e70fe417e10c68037.jpg">
+            <img src="https://i.pinimg.com/736x/42/cb/89/42cb899a89a9b4f78813c9fedabff400.jpg">
+            <img src="https://i.pinimg.com/736x/10/fe/e9/10fee9570d50898f895091b91ba01c8b.jpg">
+            <img src="https://i.pinimg.com/736x/5b/fd/7b/5bfd7b365d6bc284b99880a26c1ce52c.jpg">
+            <img src="https://i.pinimg.com/736x/0a/e4/42/0ae4427d8734524da2a84288913290b4.jpg">
+            <img src="https://i.pinimg.com/736x/b7/8e/a8/b78ea873da19abf0bd5d48651d70b0d2.jpg">
+            <img src="https://i.pinimg.com/736x/cc/cf/17/cccf17a9cff5c41fc39b22788d3cea25.jpg">
+            <img src="https://i.pinimg.com/736x/9e/f3/82/9ef3827a19d1e6a4b5685f4571121442.jpg">
+            <img src="https://i.pinimg.com/736x/b3/e2/fc/b3e2fc96dd2c846265187820848b63b9.jpg">
+          </marquee>
+        </div>
+
+        <div class="box2">
+          <span style="font-family: nds bios; font-size:20px;z-index:200;background:#becfb2;font-style:italic;color:#705d3f;">characters i relate to</span>
+          <marquee direction="left" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+            <img src="https://i.pinimg.com/736x/48/14/2d/48142d1ed1e20711d3d53c18580f0519.jpg" title="furina from genshin impact">
+            <img src="https://i.pinimg.com/736x/7c/1b/88/7c1b88416bc073c4416ce771b15e8929.jpg" title="vi from arcane">
+            <img src="https://i.pinimg.com/736x/7a/25/45/7a2545dba23d2ed6151e73b077d92ce9.jpg" title="sua from alien stage">
+            <img src="https://i.pinimg.com/736x/93/69/cc/9369cc20de418a789f4fdf67bda702ba.jpg" title="usagi tsukino from sailor moon">
+            <img src="https://i.pinimg.com/736x/35/58/75/355875975407f747f2eca71f5599908d.jpg" title="ame from needy streamer overload">
+            <img src="https://i.pinimg.com/736x/bb/93/5e/bb935e39f2d66248b6e4178227bdb233.jpg" title="marceline from adventure time">
+            <img src="https://i.pinimg.com/736x/6a/ce/bf/6acebfba98d569f5c2ead43446278ba6.jpg" title="maple from animal crossing">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+</body>
+</html>
